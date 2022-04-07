@@ -1,0 +1,124 @@
+header{
+    background-color: transparent;
+}
+header nav ul li a{
+    color: black;
+}
+header nav ul li a::after{
+    background-color: black;
+}
+
+header.hidden{
+    position: fixed;
+    height: 70px;
+    top: 0;
+    transform: translateY(-80px);
+    background-color: rgb(40, 36, 213);
+    transition: .3s ease;
+}
+header.hidden ul li a{
+    color: white;
+}
+header.hidden ul li a::after{
+    background-color: white;
+}
+header.hidden.active{
+    transform: translateY(0);
+}
+/* Main */
+main{
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1400px;
+}
+main > img{
+    width: 100%;
+    max-height: 400px;
+    border-radius: 16px;
+    margin-bottom: 65px;
+    object-fit: cover;
+}
+
+/* Title */
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 0 auto 65px;
+}
+.title img{
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.title .text{
+    text-align: center;
+}
+.title .text h1{
+  color: rgb(40, 36, 213);
+  font-size: 1.6rem;
+}
+.title .text span{
+    display: inline-block;
+    font-weight: 300;
+    margin-top: 3px;
+    color: rgba(0, 0, 0, 0.837);
+}
+
+/* Article */
+article{
+    padding: 0 10px;
+}
+article > img{
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 12px;
+    max-width: 620px;
+}
+article h3{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-weight: 500;
+
+}
+article p{
+    color: rgba(0, 0, 0, 0.832);
+    font-weight: 300;
+    font-size: 1.08rem;
+    width: 100%;
+    max-width: 900px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 720px){
+    header nav button i{
+        color: rgb(40, 36, 213);
+    }
+    header.hidden nav button i{
+        color: white;
+    }
+    header nav ul li a{
+        color: white;
+    }
+    header.hidden nav ul{
+        position: fixed;
+    }
+    header.hidden nav ul{
+        opacity: 0;
+        visibility: hidden;
+    }
+    header.hidden.active nav.active ul{
+        opacity: 1;
+        visibility: visible;
+    }
+}

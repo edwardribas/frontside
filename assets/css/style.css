@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(40, 36, 213);
+  border-radius: 50px;
+  border: 3px solid white;
+}
+/* General */
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: "Outfit", sans-serif;
+}
+img,
+header {
+  user-select: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(40, 36, 213);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  max-width: 1400px;
+}
+header nav #brand {
+  width: 140px;
+}
+header nav .menu-toggler {
+  display: none;
+}
+header nav ul {
+  display: inline-flex;
+  gap: 20px;
+}
+header nav ul li a {
+  position: relative;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease;
+}
+header nav ul li a::after {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  width: 0;
+  transition: width 0.2s ease;
+}
+header nav ul li a:hover::after {
+  width: 80%;
+}
+header nav ul li a span {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(40, 36, 213);
+  padding: 35px 20px 45px;
+  margin: 100px auto 30px;
+  text-align: center;
+}
+
+footer img {
+  margin-bottom: 20px;
+}
+footer p {
+  color: white;
+  font-weight: 200;
+  font-size: 0.95rem;
+}
+
+/* Up Button */
+.up-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.103);
+  display: flex;
+  justify-content: center;
+  transform: translateY(10px);
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(63, 60, 233);
+  transition: 0.2s ease;
+}
+.up-btn.active {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+.up-btn i {
+  color: white;
+}
+
+@media (max-width: 720px) {
+  header nav .menu-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+  }
+  header{
+    height: 60px;
+  }
+  header nav #brand{
+    max-width: 120px;
+  }
+  header nav ul {
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    right: 20px;
+    transform: translateY(-10px);
+    background-color: rgb(59, 56, 226);
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.067);
+    border-radius: 12px;
+    gap: 10px;
+    max-width: 250px;
+    padding: 30px;
+    transition: 0.3s ease;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+  }
+  header nav ul li {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+  header nav ul li a {
+    display: block;
+    color: rgb(225, 225, 225);
+    padding: 10px 15px;
+    border-radius: 13px 30px 30px 13px;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  header nav ul li a#active {
+    color: rgb(225, 225, 225);
+    font-weight: 300;
+  }
+  header nav ul li a::after {
+    display: none;
+  }
+  header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.136);
+    transform: translateX(5px);
+  }
+  header nav ul li a span {
+    display: inline-block;
+    min-width: 20px;
+    max-width: 20px;
+    margin-right: 5px;
+  }
+  header nav.active ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
