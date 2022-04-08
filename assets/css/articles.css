@@ -131,7 +131,7 @@ article p{
     max-width: 850px;
     align-items: center;
     margin: 50px auto;
-    border-radius: 30px;
+    border-radius: 12px;
     box-shadow: 0 16px 20px rgba(0, 0, 0, 0.161);
     background-color: rgb(49, 35, 202);
 }
@@ -207,13 +207,13 @@ main .final .text h2{
 }
 main .final .text p{
     font-size: 1rem;
-    margin-top: 5px;
-    font-weight: 300;
+    margin-top: 6px;
+    font-weight: 200;
 }
 main .final .text .links{
     display: flex;
-    gap: 10px;
-    margin-top: 6px;
+    gap: 17px;
+    margin-top: 14px;
 }
 main .final .text .links a{
     color: rgb(40, 36, 213);
@@ -263,5 +263,8 @@ main .final .text .links a{
     }
     main .final .links{
         justify-content: center;
+    }
+    main .final .text .links a{
+        font-size: 1.6rem;
     }
 }
