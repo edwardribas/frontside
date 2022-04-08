@@ -11,10 +11,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 12px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgb(40, 36, 213);
   border-radius: 50px;
   border: 3px solid white;
@@ -47,7 +47,7 @@ header nav {
   width: 85%;
   max-width: 1400px;
 }
-header nav #brand {
+header nav .brand {
   width: 140px;
 }
 header nav .menu-toggler {
@@ -137,10 +137,10 @@ footer p {
     background-color: transparent;
     color: rgb(255, 255, 255);
   }
-  header{
+  header {
     height: 60px;
   }
-  header nav #brand{
+  header nav .brand {
     max-width: 120px;
   }
   header nav ul {

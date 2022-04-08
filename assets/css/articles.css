@@ -10,9 +10,11 @@ header nav ul li a::after{
 
 header.hidden{
     position: fixed;
+    z-index: 200;
     height: 70px;
     top: 0;
     transform: translateY(-80px);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.279);
     background-color: rgb(40, 36, 213);
     transition: .3s ease;
 }
@@ -81,25 +83,157 @@ article > img{
 }
 article h3{
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto 30px;
+    max-width: 850px;
+    font-size: 1.4rem;
+    margin: 0 auto 15px;
     font-weight: 500;
-
+}
+article .video{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+article .video video{
+    width: 100%;
+    display: block;
+}
+article .video span{
+    display: block;
+    margin-top: 30px;
+    text-align: right;
+    font-weight: 200;
+    font-size: .85rem;
+}
+article a{
+    color: rgb(40, 36, 213);
 }
 article p{
     color: rgba(0, 0, 0, 0.832);
     font-weight: 300;
     font-size: 1.08rem;
     width: 100%;
-    max-width: 900px;
+    max-width: 850px;
     -webkit-hyphens: auto;
     hyphens: auto;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
+.seealso{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    gap: 50px;
+    max-width: 850px;
+    align-items: center;
+    margin: 50px auto;
+    border-radius: 30px;
+    box-shadow: 0 16px 20px rgba(0, 0, 0, 0.161);
+    background-color: rgb(49, 35, 202);
+}
+.seealso .image{
+    width: 100%;
+    max-width: 300px;
+}
+.seealso .text h4{
+    color: rgb(238, 238, 238);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+.seealso .text p{
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 200;
+    color: white;
+}
+.seealso .text ul{
+    padding-left: 20px;
+}
+.seealso .text ul li{
+    position: relative;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.seealso .text ul li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: rgb(241, 241, 241);
+}
+.seealso .text ul li a{
+    font-weight: 200;
+    color: rgb(211, 211, 211);
+    transition: color .2s ease;
+}
+.seealso .text ul li a:hover{
+    color: white;
+}
+
+main .final{
+    width: 100%;
+    max-width: 850px;
+    padding-top: 50px;
+    border-top: 1px solid rgb(40, 36, 213);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+main .final .author{
+    width: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+main .final .author img{
+    width: 100%;
+    display: block;
+}
+main .final .text h2{
+    font-size: 1.3rem;
+    color: rgb(40, 36, 213);
+    font-weight: 700;
+}
+main .final .text p{
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: 300;
+}
+main .final .text .links{
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+main .final .text .links a{
+    color: rgb(40, 36, 213);
+    font-size: 1.3rem;
+}
+
+
+@media(max-width: 820px){
+    .seealso{
+        padding: 20px 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .seealso .text h4{
+        font-size: 1.2rem;
+    }
+    .seealso .text p, .seealso .text ul li a{
+        font-size: .97rem;
+    }
+}
 @media(max-width: 720px){
     header nav button i{
         color: rgb(40, 36, 213);
@@ -120,5 +254,14 @@ article p{
     header.hidden.active nav.active ul{
         opacity: 1;
         visibility: visible;
+    }
+}
+@media(max-width: 480px){
+    main .final{
+        flex-direction: column;
+        text-align: center;
+    }
+    main .final .links{
+        justify-content: center;
     }
 }
