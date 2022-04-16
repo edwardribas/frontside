@@ -86,20 +86,24 @@ article h3{
     max-width: 850px;
     font-size: 1.4rem;
     margin: 0 auto 15px;
+    color: #151515;
     font-weight: 500;
 }
-article .video{
+article b{
+    font-weight: 500;
+}
+article .media{
     width: 100%;
     max-width: 700px;
-    border-radius: 10px;
     margin: 40px auto;
     overflow: hidden;
 }
-article .video video{
+article .media video, article .media img{
     width: 100%;
+    border-radius: 10px;
     display: block;
 }
-article .video span{
+article .media span{
     display: block;
     margin-top: 30px;
     text-align: right;
