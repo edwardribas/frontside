@@ -4,6 +4,7 @@ header{
 header nav ul li a{
     color: black;
 }
+
 header nav ul li a::after{
     background-color: black;
 }

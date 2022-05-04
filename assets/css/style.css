@@ -77,7 +77,7 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
   width: 80%;
 }
-header nav ul li a span {
+header nav ul li a .icon {
   display: none;
 }
 
@@ -168,12 +168,17 @@ footer p {
     max-width: 300px;
   }
   header nav ul li a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: rgb(225, 225, 225);
     padding: 10px 15px;
     border-radius: 13px 30px 30px 13px;
     width: 100%;
     transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  header nav ul li a .icon i{
+    font-size: .9rem;
   }
   header nav ul li a#active {
     color: rgb(225, 225, 225);
@@ -186,11 +191,10 @@ footer p {
     background-color: rgba(0, 0, 0, 0.136);
     transform: translateX(5px);
   }
-  header nav ul li a span {
+  header nav ul li a .icon {
     display: inline-block;
     min-width: 20px;
     max-width: 20px;
-    margin-right: 5px;
   }
   header nav.active ul {
     opacity: 1;

@@ -8,7 +8,7 @@
 
     <!-- General -->
     <title>frontside. | o portal norteador</title>
-    <link rel="shortcut icon" href="assets/images/logo.svg">
+    <link rel="shortcut icon" href="assets/images/logo/logo.svg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
 
@@ -20,10 +20,11 @@
     <!-- Header -->
     <header>
         <nav>
-            <img src="assets/images/logowhite.svg" class="brand" alt="Logo branca do blog.">
+            <img src="assets/images/logo/logowhite.svg" class="brand" alt="Logo branca do blog.">
             <ul>
-                <li><a href="#"><span class="icon"><i class="fa-solid fa-house"></i></span>Início</a></li>
+                <li><a href="#" aria-label="Você já está nesta página."><span class="icon"><i class="fa-solid fa-house"></i></span>Início</a></li>
                 <li><a href="https://github.com/edwardribas" target="_blank"><span class="icon"><i class="fa-brands fa-github"></i></span>Github</a></li>
+                <li><a href="./membros.html"><span class="icon"><i class="fa-solid fa-user-group"></i></span>Membros</a></li>
             </ul>
             <button class="menu-toggler">
                 <i class="gg-menu-right-alt"></i>
@@ -39,11 +40,13 @@
                 <h2>O portal de artigos que o norteará nos estudos.</h2>
             </div>
             <div class="image desktop">
-                <img src="assets/images/hero.svg" alt="Rapaz estudando em seu escritório.">
+                <img src="assets/images/illustrations/hero.svg" alt="Rapaz estudando em seu escritório.">
             </div>
         </div>
     </div>
+
     <div class="waves"></div>
+
     <!-- Main -->
     <main>
 
@@ -75,13 +78,13 @@
             </article>
 
             <article>
-                <a href="#">
+                <a href="./articles/03.html">
                     <div class="image">
                         <img src="assets/images/artigos/img4.jpeg" alt="Banner do artigo.">
                         <img src="assets/images/authors/ribas.jpg" class="author" alt="Imagem do autor do artigo.">
                     </div>
                     <div class="text">
-                        <p>Eduardo Ribas | 26 de abril de 2022 | Não lançado</p>
+                        <p>Eduardo Ribas | 26 de abril de 2022</p>
                         <h3>Qual a importância de manter o seu ambiente limpo e organizado?</h3>
                     </div>
                 </a>
@@ -137,7 +140,7 @@
 
     <div class="info-card">
         <div class="image">
-            <img src="assets/images/blogging.svg" alt="Imagem de rapaz digitando em seu notebook.">
+            <img src="assets/images/illustrations/blogging.svg" alt="Imagem de rapaz digitando em seu notebook.">
         </div>
         <div class="text">
             <h2>Sobre o nosso projeto...</h2>
@@ -153,12 +156,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <img src="assets/images/logowhite.svg" alt="Logo branca do blog.">
+            <img src="assets/images/logo/logowhite.svg" alt="Logo branca do blog.">
             <p>frontside &copy; 2022. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Application -->
+    <script src="assets/js/index.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
