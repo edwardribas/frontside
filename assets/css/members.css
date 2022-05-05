@@ -34,7 +34,7 @@ header.hidden.active{
 /* Application */
 main{
     text-align: center;
-    min-height: calc(100% - 300px);
+    min-height: calc(100% - 270px);
 }
 
 /* Gallery Switcher */
@@ -130,7 +130,7 @@ span.overlay.active{
 /* Images */
 .card .image{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
 }
 .card .image img{
@@ -143,14 +143,16 @@ span.overlay.active{
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
+    color: rgb(40, 36, 213);
+    font-size: 1.2rem;
     margin-top: 25px;
-    margin-bottom: 10px;
 }
 .card h3{
     color: rgb(28, 28, 28);
     margin: 2px 0 15px;
-    font-size: 1rem;
-    font-weight: 300;
+    margin-top: 6px;
+    font-size: .95rem;
+    font-weight: 200;
 }
 
 
