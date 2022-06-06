@@ -189,12 +189,12 @@ article p{
 main .final{
     width: 100%;
     max-width: 850px;
-    padding-top: 50px;
-    border-top: 1px solid rgb(40, 36, 213);
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     margin: 0 auto;
-    gap: 50px;
+    gap: 35px;
 }
 main .final .author{
     width: 100%;
@@ -219,6 +219,7 @@ main .final .text p{
 }
 main .final .text .links{
     display: flex;
+    justify-content: center;
     gap: 17px;
     margin-top: 14px;
 }
@@ -260,6 +261,19 @@ main .tags span:hover{
     color: #fff;
 }
 
+.end{
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    width: 100%;
+    margin: 60px auto 80px;
+}
+.end span{
+    background-color: rgb(40, 36, 213);
+    border-radius: 50%;
+    padding: 3px;
+}
+
 @media(max-width: 820px){
     .seealso{
         padding: 20px 25px;
@@ -293,17 +307,5 @@ main .tags span:hover{
     header.hidden.active nav.active ul{
         opacity: 1;
         visibility: visible;
-    }
-}
-@media(max-width: 480px){
-    main .final{
-        flex-direction: column;
-        text-align: center;
-    }
-    main .final .links{
-        justify-content: center;
-    }
-    main .final .text .links a{
-        font-size: 1rem;
     }
 }

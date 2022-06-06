@@ -1,6 +1,6 @@
 /* Hero */
 .hero {
-  padding: 70px 0;
+  padding: 30px 0;
   background-color:rgb(40, 36, 213)
 }
 .hero .container {
@@ -27,12 +27,34 @@
 }
 .hero .container .text h1 {
   font-size: 900;
-  margin-bottom: 20px;
 }
 .hero .container .text h2 {
   font-size: 300;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 200;
+  margin: 20px 0 35px;
+}
+.hero .container .text button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 40px;
+  font-weight: 300;
+  font-size: .97rem;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid transparent;
+  color: rgb(40, 36, 213);
+  padding: .9rem 1.5rem;
+  transition: border .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.hero .container .text button:hover {
+  border: 2px solid #fff;
+  background-color: rgb(40, 36, 213);
+  color: #fff;
+}
+.hero .container .text button:active {
+  transform: scale(0.95);
 }
 .waves {
   width: 100%;
@@ -142,8 +164,9 @@ main .sticky-bar a{
   gap: 10px;
   align-items: center;
 
-  color: rgb(0, 0, 0);
-  background-color: rgb(240, 240, 255);
+  color: rgb(40, 36, 213);
+  font-weight: 300;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.177);
 
   -webkit-user-select: none;
