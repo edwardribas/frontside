@@ -236,16 +236,23 @@ main .sticky-bar a:active{
   }
 }
 @media (max-width: 970px) {
+  .hero{
+    padding: 60px 0 0;
+  }
   .hero .container {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+  }
+  .hero .container .text button {
+    padding: .7rem 1.1rem;
   }
   .hero .container .text h1 {
     font-size: 1.6rem;
   }
   .hero .container .text h2 {
     font-size: 1.1rem;
+    margin: 20px 0 30px;
   }
   .info-card{
     flex-direction: column;
