@@ -45,18 +45,18 @@ main{
     user-select: none;
     display: inline-flex;
     gap: 10px;
-    background-color: #e4e4ff;
-    box-shadow: 0 20px 40px #d7cff036;
-    padding: 8px 14px;
-    border-radius: 10px;
+    padding: 0 12px;
+    border: 1px solid rgb(40, 36, 213);
+    border-radius: 40px;
     margin: 40px auto 30px;
 }
 span.option{
+    /* background-color: rgba(0, 0, 0, 0.335); */
     position: relative;
     z-index: 1;
     color: rgb(40, 36, 213);
     font-weight: 300;
-    padding: 12px 16px;
+    padding: 14px 16px;
     line-height: 1;
     cursor: pointer;
     transition: color .2s ease;
@@ -68,18 +68,21 @@ span.option.active{
 /* Blue Overlay */
 span.overlay{
     position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 12px;
+    top: 4px;
+    bottom: 4px;
+    right: 0;
+    left: 6px;
+    right: inherit;
     z-index: 0;
-    width: 92px;
-    border-radius: 10px;
+    width: 102px;
+    border-radius: 40px;
     background-color: rgb(40, 36, 213);
-    transition: width .3s ease, left .2s ease;
+    transition: .2s ease;
 }
 span.overlay.active{
-    left: 115px;
-    width: 98px;
+    left: 104px;
+    right: 4px;
+    width: 114px;
 }
 
 
@@ -104,7 +107,7 @@ span.overlay.active{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     place-items: start center;
-    gap: 60px 100px;
+    gap: 30px 100px;
     opacity: 0;
     transition: .3s ease;
 }
@@ -123,14 +126,14 @@ span.overlay.active{
 /* Card */
 .card{
 	width: 100%;
+	max-width: 180px;
     text-align: center;
-	max-width: 250px;
 }
 
 /* Images */
 .card .image{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
 }
 .card .image img{
@@ -140,11 +143,10 @@ span.overlay.active{
 
 /* Text */
 .card h2{
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-family: 'Outfit';
+    font-size: 1rem;
+    font-weight: 800;
     color: rgb(40, 36, 213);
-    font-size: 1.2rem;
     margin-top: 25px;
 }
 .card h3{
@@ -152,7 +154,7 @@ span.overlay.active{
     margin: 2px 0 15px;
     margin-top: 6px;
     font-size: .95rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 
