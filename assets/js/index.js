@@ -1,5 +1,5 @@
 const upButton = document.querySelector('.up-btn'),
-      shuffleButton = document.querySelector('.text button'),
+      shuffleButton = document.querySelector('.text a'),
       articlesLinks = document.querySelectorAll('article > a')
 ;
 
@@ -26,5 +26,7 @@ shuffleButton.onclick = () => {
 
     let randomNumber = Math.floor(Math.random() * links.length);
 
-    location.href = links[randomNumber];
+    shuffleButton.setAttribute('href', links[randomNumber]);
+    
+    shuffleButton.click();
 }

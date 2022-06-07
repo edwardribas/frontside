@@ -34,7 +34,9 @@
   font-weight: 200;
   margin: 20px 0 35px;
 }
-.hero .container .text button {
+.hero .container .text a {
+  -webkit-user-select: none;
+  user-select: none;
   display: inline-flex;
   gap: 10px;
   align-items: center;
@@ -48,12 +50,12 @@
   padding: .9rem 1.5rem;
   transition: border .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
 }
-.hero .container .text button:hover {
+.hero .container .text a:hover {
   border: 2px solid #fff;
   background-color: rgb(40, 36, 213);
   color: #fff;
 }
-.hero .container .text button:active {
+.hero .container .text a:active {
   transform: scale(0.95);
 }
 .waves {
