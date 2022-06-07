@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" id="tags" content="frontside, javascript, métodos, arrays, objetos, objects, strings, numbers, booleans, operações lógicas, null, undefined">
+
+    <!-- General -->
+    <title>frontside | Descubra os principais tipos primitivos do JavaScript.</title>
+    <link rel="shortcut icon" href="../assets/images/logo/logo.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/articles.css">
+
+    <!-- Icons -->
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/932eb47ff0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img src="../assets/images/logo/logoblue.svg" class="brand" alt="Logo azul do blog.">
+            </a>
+            <ul>
+                <li><a href="../index.html"><span class="icon"><i class="fa-solid fa-house"></i></span>Início</a></li>
+                <li><a href="https://github.com/edwardribas" target="_blank"><span class="icon"><i class="fa-brands fa-github"></i></span>Github</a></li>
+                <li><a href="../membros.html"><span class="icon"><i class="fa-solid fa-user-group"></i></span>Membros</a></li>
+            </ul>
+            <button class="menu-toggler">
+                <i class="gg-menu-right-alt"></i>
+            </button>
+        </nav>
+    </header>
+
+    <header class="hidden">
+        <nav>
+            <a href="#" aria-label="Ir para o topo.">
+                <img src="../assets/images/logo/logowhite.svg" class="brand" alt="Logo branca do blog.">
+            </a>
+            <ul>
+                <li><a href="../index.html"><span class="icon"><i class="fa-solid fa-house"></i></span>Início</a></li>
+                <li><a href="https://github.com/edwardribas" target="_blank"><span class="icon"><i class="fa-brands fa-github"></i></span>Github</a></li>
+                <li><a href="../membros.html"><span class="icon"><i class="fa-solid fa-user-group"></i></span>Membros</a></li>
+            </ul>
+            <button class="menu-toggler">
+                <i class="gg-menu-right-alt"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <div class="title">
+            <img src="../assets/images/authors/ribas.jpg" alt="Imagem do autor do artigo.">
+            <div class="text">
+                <h1>Descubra os principais tipos primitivos do JavaScript.</h1>
+                <span>Eduardo Ribas | 07 de junho de 2022</span>
+            </div>
+        </div>
+        <img src="../assets/images/artigos/article-3.jpeg" alt="Banner da matéria.">
+
+
+        <!-- Article -->
+        <article>
+            <!-- Introdução -->
+            <h3 id="introducao"><a href="#introducao">Introdução</a></h3>
+            <p>
+                Apesar de parecer algo simples, pode ser difícil para alguns compreender os tipos
+                de dados do JavaScript ao certo, então hoje vamos passar por alguns e tentar explicá-los da 
+                melhor maneira possível. Ah, e não se esqueça de compartilhar caso ache o artigo útil! =)
+            </p>
+
+            <!-- Tipos -->
+            <h3 id="tipos"><a href="#tipos">Vamos lá, quais são os tipos?</a></h3>
+            <p>
+                O JavaScript trabalha com <b>7 tipos diferentes de dados</b> no ES6 (Ecma Script 6) e um deles
+                se trata do Symbol que, por agora, não será discutido. Veja a seguir uma lista com os tipos de dados e
+                clique sobre um deles para ser redirecionado à sua respectiva documentação
+            </p>
+
+            <ul class="special">
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">Number</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank">Boolean</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null" target="_blank">Null</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank">Undefined</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol" target="_blank">Symbol (ES6)</a></li>
+            </ul>
+
+            <!-- Strings -->
+            <h3 id="strings"><a href="#strings">Strings</a></h3>
+            <p>
+                Strings são um dos tipos mais simples de entender no JavaScript, pois elas são responsáveis por armazenar
+                qualquer tipo de texto. Você pode iniciar um texto por meio de <b>aspas duplas</b>, <b>aspas simples</b> 
+                ou <b>pelos sinais de crase</b> (template strings). Logo você entenderá mais a diferença entre as três.
+            </p>
+            <p>
+                Vamos imaginar o seguinte: você quer escrever uma citação numa string iniciada com aspas duplas, mas ao
+                colocar as benditas aspas, seu código aponta um erro. Isso tem um motivo lógico: se você inicia uma string com
+                aspas duplas, ao colocar a próxima, você estará indicando o final da string, mas isso tem solução.
+            </p>
+            <p>
+                Você poderia iniciar sua string com aspas simples e fechá-la com aspas simples, podendo assim manusear as aspas
+                duplas dentro do texto livremente. Você também poderia fazer o mesmo com aspas duplas para escrever aspas simples
+                sem problemas no seu texto.
+            </p>
+            <p>
+                Mas afinal, qual a real utilidade das template strings? A resposta é: <strong>facilitar na interpolação</strong>
+                entre strings e variáveis. A interpolação consiste em concatenar duas ou mais strings ou variáveis. Se você quiser
+                juntar o texto da variável <code>t1</code> com o texto de <code>t2</code>, bastaria fazer <code>`${t1} ${t2}`</code>.
+            </p>
+
+            <!-- Numbers -->
+            <h3 id="numbers"><a href="#numbers">Numbers</a></h3>
+            <p>
+                O tipo number é por si só autoexplicativo; ele é responsável por armazenar todos os tipos de números, desde
+                inteiros a decimais. Em outras linguagens de programação, é comum você ter que definir o tipo do número na
+                sua inicialização, porém no JavaScript, você só passa o número e a engine faz o resto do trabalho.
+            </p>
+            <p>
+                Também é comum encontrarmos números armazenados em strings, mas para fazer operações aritméticas com eles, é
+                necessário convertê-los para o tipo <b>number</b>. Temos ao nosso dispor métodos como <code>Number('n')</code>,
+                <code>parseInt('n')</code>, <code>parseFloat('n')</code> e até mesmo <code>+n</code>.
+            </p>
+            <p>
+                O <b>primeiro método</b> listado converte o argumento passado para um número independentemente do argumento ser um número
+                inteiro ou decimal. O <b>segundo método</b> converte somente para um número inteiro e o <b>terceiro</b>, para um decimal.
+                O <code>+n</code> que vimos é um short-hand para <code>Number('n')</code>! Simples, não?
+            </p>
+
+            <!-- Booleans -->
+            <h3 id="boolean"><a href="#boolean">Boolean</a></h3>
+            <p>
+                Os valores booleanos são aqueles que retornam true e false (verdadeiro e falso) de alguma operação lógica.
+                No JavaScript, temos também <strong>falsy</strong> and <strong>truthy</strong> values, que são valores que,
+                respectivamente, retornam false e true. No desenvolvimento de uma aplicação, isso acaba facilitando bastante.
+            </p>
+            <p>Exemplos de falsy values</p>
+            <ul class="special">
+                <li>undefined</li>
+                <li>null</li>
+                <li>0</li>
+                <li>"" &nbsp- string vazia</li>
+                <li>false</li>
+                <li>NaN</li>
+            </ul>
+            <p>Exemplos de truthy values</p>
+            <ul class="special">
+                <li>-42</li>
+                <li>Infinity</li>
+                <li>{} &nbsp- objeto vazio</li>
+                <li>[] &nbsp- array vazio</li>
+                <li>42</li>
+                <li>new Date()</li>
+                <li>true</li>
+            </ul>
+
+            <!-- Objetos -->
+            <h3 id="objetos"><a href="#objetos">Objetos</a></h3>
+            <p>
+                É comum ouvirmos por aí que o JavaScript é uma linguagem baseada em objetos. Explicando de maneira
+                simplória, cada objeto criado possui um <em>prototype</em> que é herdado do <em>Object</em>, um dos
+                tipos citados anteriormente, que contém um conjunto de vários dados e métodos, assuntos que serão 
+                tratados num outro dia.
+            </p>
+            <p>
+                Na declaração de um objeto, você precisa especificar o seu índice e seus respectivos valores, assim
+                como neste trecho de código: <code>const autor = { 'nome': 'Eduardo' }</code>. Podemos perceber que sua inicialização
+                se dá por meio das chaves que envolve todas as informações especificadas.
+            </p>
+            <p>
+                Podemos obter valores de um objeto de duas maneiras: <code>autor.nome</code>, que é a notação de ponto (dot notation)
+                e <code>autor['nome']</code>, que se trata da notação de colchetes (bracket notation). Pela notação de colchetes, você
+                tem liberdade para passar variáveis como valores, diferentemente da notação de ponto.
+            </p>
+
+            <!-- Arrays -->
+            <h3 id="arrays"><a href="#arrays">Arrays</a></h3>
+            <p>
+                Os arrays nada mais são que objetos, porém seus índices não são definidos manualmente. Seus índices sempre
+                começarão automaticamente a partir do 0. No array <code>const salada = [ 'manga', 'banana', 'maçã' ]</code>,
+                <b>manga</b> se encontra no índice 0, na primeira posição, enquanto <b>maçã</b> se localiza no índice 2, na
+                terceira posição.
+            </p>
+            <p>
+                Quando não é necessário definir um nome para o índice, os arrays são os mais apropriados. Diferentemente dos
+                objetos padrões, os arrays se inicializam com colchetes e seus valores só podem ser acessados por meio da notação
+                de colchetes (bracket notation), pois seus índices são números e na notação de pontos, o primeiro caractere precisa
+                ser uma letra.
+            </p>
+
+            <!-- Null e undefined -->
+            <h3 id="nullandundefined"><a href="#nullandundefined">Null e undefined</a></h3>
+            <p>
+                Chegamos nos últimos tipos deste artigo! Na prática, esses valores podem se parecer, mas no geral, representam
+                coisas diferentes que, a princípio, pode ser meio complicado de se entender.
+            </p>
+            <p>
+                Podemos concluir que <code>undefined</code> representa uma variável ou campo que não teve
+                o seu valor atribuído previamente, sendo na maior parte das vezes, erro do programador, enquanto <code>null</code> representa a ausência
+                intencional de um valor, normalmente induzido pelo programador.
+
+            </p>
+
+
+        </article>
+        
+        <div class="end">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="final">
+            <div class="author">
+                <img src="../assets/images/authors/ribas.jpg" alt="Imagem do autor do artigo">
+            </div>
+            <div class="text">
+                <h2>Eduardo Ribas</h2>
+                <p>Estudante & Desenvolvedor Web.</p>
+                <div class="links">
+                    <a href="https://github.com/edwardribas" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/edwardb.as" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://edwardribas.github.io" target="_blank"><i class="fa-solid fa-briefcase"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tags">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="../assets/images/logo/logowhite.svg" alt="Logo branca do blog.">
+            <p>frontside &copy; 2022. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Application -->
+    <script src="../assets/js/app.js"></script>
+
+    <script src="../assets/js/articles.js"></script>
+</body>
+
+</html>

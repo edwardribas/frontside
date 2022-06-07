@@ -12,7 +12,7 @@ header nav ul li a::after{
 header.hidden{
     position: fixed;
     z-index: 200;
-    height: 70px;
+    height: 65px;
     top: 0;
     transform: translateY(-80px);
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.279);
@@ -38,7 +38,7 @@ main > img{
     width: 100%;
     max-height: 400px;
     border-radius: 16px;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     object-fit: cover;
 }
 
@@ -70,6 +70,11 @@ main > img{
     margin-top: 3px;
     color: rgba(0, 0, 0, 0.837);
 }
+.gist{
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
 
 /* Article */
 article{
@@ -83,15 +88,61 @@ article > img{
     max-width: 620px;
 }
 article h3{
+    padding-top: 90px;
     width: 100%;
     max-width: 850px;
+    margin: -35px auto 20px;
+}
+article h3 a{
     font-size: 1.4rem;
-    margin: 0 auto 15px;
     color: #151515;
     font-weight: 500;
 }
-article b{
+article b, strong{
     font-weight: 500;
+}
+article ul.special{
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+article ul.special:not(:first-of-type) li{
+    border-radius: 4px;
+    font-weight: 300;
+    border: 1px solid rgb(40, 36, 213);
+    line-height: 1;
+    padding: 8px 15px;
+    color: rgb(40, 36, 213);
+    transition: background-color .2s ease, color .2s ease;
+}
+article code{
+    background-color: rgba(30, 30, 30, 0.1);
+    padding: 4px 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-weight: 200;
+    color: rgb(32, 32, 32);
+}
+article ul.special li a{
+    border-radius: 4px;
+    font-weight: 300;
+    border: 1px solid rgb(40, 36, 213);
+    line-height: 1;
+    padding: 8px 15px;
+    color: rgb(40, 36, 213);
+    transition: background-color .2s ease, color .2s ease;
+}
+article ul.special li:hover a{
+    color: #fff;
+    background-color: rgb(40, 36, 213);
+}
+article ul.special:not(:first-of-type) li:hover{
+    color: #fff;
+    background-color: rgb(40, 36, 213);
 }
 article .media{
     width: 100%;
@@ -125,10 +176,10 @@ article p{
     -webkit-hyphens: auto;
     hyphens: auto;
     text-align: justify;
-    line-height: 1.55;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin: 0 auto 30px;
 }
+
 
 .seealso{
     display: flex;
@@ -142,6 +193,8 @@ article p{
     box-shadow: 0 16px 20px rgba(0, 0, 0, 0.161);
     background-color: rgb(49, 35, 202);
 }
+
+
 .seealso .image{
     width: 100%;
     max-width: 300px;
@@ -233,6 +286,13 @@ main .final .text .links a{
     border-radius: 100%;
     color: #fff;
     font-size: 1rem;
+    transition: transform .3s ease;
+}
+main .final .text .links a:hover{
+    transform: translateY(-3px);
+}
+main .final .text .links a:active{
+    transform: translateY(3px);
 }
 
 main .tags{
